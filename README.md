@@ -27,27 +27,12 @@ The system demonstrates:
 
 ---
 
-## Tech Stack — Badges  
-
-| Tech | Badge |
-|------|------|
-| Kafka | ![Kafka](https://img.shields.io/badge/Apache%20Kafka-black?logo=apachekafka) |
-| Spark | ![Spark](https://img.shields.io/badge/Apache%20Spark-orange?logo=apachespark) |
-| Apache Hudi | ![Hudi](https://img.shields.io/badge/Apache%20Hudi-blue) |
-| Docker | ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white) |
-| Airflow | ![Airflow](https://img.shields.io/badge/Airflow-017CEE?logo=apacheairflow&logoColor=white) |
-| MinIO | ![MinIO](https://img.shields.io/badge/MinIO-C72C48?logo=minio&logoColor=white) |
-| PostgreSQL | ![Postgres](https://img.shields.io/badge/PostgreSQL-31648c?logo=postgresql&logoColor=white) |
-| Grafana | ![Grafana](https://img.shields.io/badge/Grafana-F47A20?logo=grafana&logoColor=white) |
-| Python | ![Python](https://img.shields.io/badge/Python-FFD43B?logo=python&logoColor=blue) |
-
----
 
 ## System Architecture
 
-![Description of the image](images/architecture.png)
+![System Architecture](https://github.com/homunculus86/E-Commerce-Analytics-/blob/509c7f74c91d0383595059f2bac28c4066242d35/general%20architecture.png)
 
-
+## Data workflow
 ```
               +----------------------+
               |   Data Generator     |

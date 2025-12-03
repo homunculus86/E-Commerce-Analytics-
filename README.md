@@ -1,6 +1,14 @@
 
 #  E-Commerce Real-Time Analytics & Revenue Forecasting Pipeline  
-**Kafka • Spark • Apache Hudi • Airflow • MinIO • PostgreSQL • Grafana • Docker**
+![Python](https://img.shields.io/badge/Python-FFD43B?logo=python&logoColor=blue)
+![Grafana](https://img.shields.io/badge/Grafana-F47A20?logo=grafana&logoColor=white)
+![Postgres](https://img.shields.io/badge/PostgreSQL-31648c?logo=postgresql&logoColor=white) 
+![MinIO](https://img.shields.io/badge/MinIO-C72C48?logo=minio&logoColor=white)
+![Airflow](https://img.shields.io/badge/Airflow-017CEE?logo=apacheairflow&logoColor=white) 
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
+![Hudi](https://img.shields.io/badge/Apache%20Hudi-blue) 
+![Spark](https://img.shields.io/badge/Apache%20Spark-orange?logo=apachespark)
+![Kafka](https://img.shields.io/badge/Apache%20Kafka-black?logo=apachekafka)
 
 ---
 
@@ -36,6 +44,9 @@ The system demonstrates:
 ---
 
 ## System Architecture
+
+![Description of the image](images/architecture.png)
+
 
 ```
               +----------------------+

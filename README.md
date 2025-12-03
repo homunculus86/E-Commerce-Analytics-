@@ -1,0 +1,155 @@
+
+#  E-Commerce Real-Time Analytics & Revenue Forecasting Pipeline  
+**Kafka • Spark • Apache Hudi • Airflow • MinIO • PostgreSQL • Grafana • Docker**
+
+---
+
+##  Project Overview
+
+This project implements a **complete real-time data engineering pipeline** that ingests, processes, stores, analyzes, and visualizes e-commerce order data using a modern **Lakehouse architecture** with automated workflows and forecasting models.
+
+The system demonstrates:
+-  Real-time data ingestion (Kafka)
+-  Stream processing & batch analytics (Spark)
+-  ACID data lake with time travel (Apache Hudi on MinIO)
+-  Automated DAG workflows (Airflow)
+-  Business dashboards & revenue forecast (Grafana)
+-  Data warehouse serving layer (PostgreSQL)
+-  Fully containerized deployment (Docker Compose)
+
+---
+
+## Tech Stack — Badges  
+
+| Tech | Badge |
+|------|------|
+| Kafka | ![Kafka](https://img.shields.io/badge/Apache%20Kafka-black?logo=apachekafka) |
+| Spark | ![Spark](https://img.shields.io/badge/Apache%20Spark-orange?logo=apachespark) |
+| Apache Hudi | ![Hudi](https://img.shields.io/badge/Apache%20Hudi-blue) |
+| Docker | ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white) |
+| Airflow | ![Airflow](https://img.shields.io/badge/Airflow-017CEE?logo=apacheairflow&logoColor=white) |
+| MinIO | ![MinIO](https://img.shields.io/badge/MinIO-C72C48?logo=minio&logoColor=white) |
+| PostgreSQL | ![Postgres](https://img.shields.io/badge/PostgreSQL-31648c?logo=postgresql&logoColor=white) |
+| Grafana | ![Grafana](https://img.shields.io/badge/Grafana-F47A20?logo=grafana&logoColor=white) |
+| Python | ![Python](https://img.shields.io/badge/Python-FFD43B?logo=python&logoColor=blue) |
+
+---
+
+## System Architecture
+
+```
+              +----------------------+
+              |   Data Generator     |
+              | (synthetic orders)   |
+              +----------+-----------+
+                         |
+                         ▼
+                  +-------------+
+                  |  KAFKA      |
+                  +-------------+
+                         |
+            ┌────────────┴────────────┐
+            |                          |
+            ▼                          ▼
+    Real-time Stream            Airflow Scheduled Batch
+  +------------------+      +---------------------------+
+  | Spark Structured |      | Spark Batch Jobs          |
+  | Streaming        |      | Analytics + Forecasting   |
+  +------------------+      +---------------------------+
+            |                          |
+            |                          |
+            ▼                          ▼
+      +-------------------+     +-------------------+
+      | Apache Hudi       |     | PostgreSQL DB     |
+      | (ACID Data Lake)  |     | Serving Layer     |
+      +-------------------+     +-------------------+
+                         |
+                         └───────────► Grafana UI
+```
+---
+
+##  Data Workflow
+
+| Stage | Technology | Output |
+|-------|-----------|--------|
+| Real-time ingestion | Kafka | Event streaming |
+| Transformation | Spark Streaming | Clean orders |
+| ACID storage | Apache Hudi | Time travel + upsert |
+| Batch analytics | Spark Batch | Metrics + aggregated stats |
+| Forecasting | Python ML | Revenue predictions |
+| Orchestration | Airflow | Daily automated workflows |
+| Dashboards | Grafana | Metrics & Forecast |
+
+---
+
+##  Project Structure
+
+```
+ E-Commerce-Analytics
+ ┣  spark-apps          --> batch + streaming spark jobs
+ ┣  airflow-dags        --> DAG pipelines
+ ┣  hudi-jars           --> hudi engine integration
+ ┣  airflow-logs
+ ┣ .gitattributes
+ ┣ docker-compose.yml     --> orchestrates the full system
+```
+---
+
+##  Features
+
+- Real-time processing under seconds ⏳  
+- Time-travel on data lake ⏮  
+- Update/delete row-level ACID transactions  
+- Daily batch analytics & forecasts generated automatically  
+- Grafana dashboards deployed out-of-the-box  
+- End-to-end pipeline in **one command**  
+
+---
+
+##  How to Install & Run
+
+###  Clone the Repository
+```bash
+git clone https://github.com/<YOUR_USERNAME>/E-Commerce-Analytics.git
+cd E-Commerce-Analytics
+```
+
+###  Start the Entire Pipeline
+>  Make sure **Docker Desktop** is installed and running
+
+```bash
+docker-compose up -d
+```
+
+###  Stop the Pipeline
+```bash
+docker-compose down
+```
+
+---
+
+##  Access Web Interfaces
+
+| Service | URL |
+|--------|-----|
+| Airflow UI | http://localhost:8080 |
+| Kafka UI (if enabled) | http://localhost:8081 |
+| MinIO | http://localhost:9000 |
+| Grafana Dashboards | http://localhost:3000 |
+| PostgreSQL | `localhost:5432` |
+
+---
+
+##  Dashboards Included
+
+- Top Products & Customers
+- Order Trend by Hour & Status
+- Revenue Forecast + Confidence Bands
+- Historical Metrics Comparison
+
+---
+
+##  Environment Variables  
+Configure inside `docker-compose.yml` according to your credentials.
+
+---

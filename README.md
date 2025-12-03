@@ -84,7 +84,7 @@ The system demonstrates:
  E-Commerce-Analytics
  ┣  spark-apps          --> batch + streaming spark jobs
  ┣  airflow-dags        --> DAG pipelines
- ┣  hudi-jars           --> hudi engine integration
+ ┣  hudi-jars           --> hudi engine integration (you need to download the followings aws-java-sdk-bundle.ja rcommons-pool2.jar hadoop-aws.jar hudi-spark3.5-bundle_2.12-0.15.0.jar kafka-clients.jar postgresql-42.7.1.jar spark-sql-kafka.jar spark-token-provider-kafka.jar)
  ┣  airflow-logs
  ┣ .gitattributes
  ┣ docker-compose.yml     --> orchestrates the full system
